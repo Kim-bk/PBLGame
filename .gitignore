@@ -3,6 +3,8 @@
 /map/
 /images/
 /.vs/
+/x64/
+
 PBLGame.sln
 PBLGame.vcxproj
 PBLGame.vcxproj.filters

@@ -27,4 +27,4 @@ protected:
 
 
 #endif // !BASE_OBJECT_H
-#pragma once
+

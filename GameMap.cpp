@@ -42,19 +42,17 @@ void GameMap::LoadMap(char* name)
 
 void GameMap::LoadTiles(SDL_Renderer* screen)
 {
-	char file_img[30];
+	char file_img[15];
 	FILE* fp = NULL;
 
 	for (int i = 0; i < MAX_TILE; i++)
 	{
-		sprintf_s(file_img, "%d.png", i);
+		sprintf_s(file_img, "map/%d.png", i);
 
 		fopen_s(&fp, file_img, "rb");
 		if (fp == NULL)
-		{
 			return;
-		}
-
+		
 		fclose(fp);
 
 		tile_map[i].LoadImg(file_img, screen);
@@ -76,7 +74,7 @@ void GameMap::DrawMap(SDL_Renderer* screen)
 	//Ve de giai thich
 	map_x = game_map_.start_x_ / TILE_SIZE;
 	x1 = (game_map_.start_x_ % TILE_SIZE) * -1; 
-	x2 = x1 + SCREEN_WITDH + (x1 == 0 ? 0 : TILE_SIZE);
+	x2 = x1 + SCREEN_WIDTH + (x1 == 0 ? 0 : TILE_SIZE);
 	
 	map_y = game_map_.start_y_ / TILE_SIZE;
 	y1 = (game_map_.start_y_ % TILE_SIZE) * -1;

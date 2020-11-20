@@ -34,4 +34,4 @@ private:
 };
 
 
-#endif
+#endif //GAME_MAP_H
